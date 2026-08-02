@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The release couldn&#x27;t be cut — and the health check had been dead for 82 days — RNR — RAR Nightly Review</title>
 <link rel="canonical" href="https://kody-w.github.io/rappvision-rnr/v/nightly-revival.html">
-<meta name="description" content="A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 60 times in a row, last green on 11 May.">
+<meta name="description" content="A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 84 times in a row, last green on 11 May.">
 
 <meta property="og:type" content="video.other">
 <meta property="og:site_name" content="RNR — RAR Nightly Review">
 <meta property="og:title" content="The release couldn&#x27;t be cut — and the health check had been dead for 82 days">
-<meta property="og:description" content="A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 60 times in a row, last green on 11 May.">
+<meta property="og:description" content="A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 84 times in a row, last green on 11 May.">
 <meta property="og:url" content="https://kody-w.github.io/rappvision-rnr/v/nightly-revival.html">
 <meta property="og:image" content="https://kody-w.github.io/rappvision-rnr/rappvision/thumbs/nightly-revival.jpg">
 <meta property="og:image:width" content="1920">
@@ -24,7 +24,7 @@
 
 <meta name="twitter:card" content="player">
 <meta name="twitter:title" content="The release couldn&#x27;t be cut — and the health check had been dead for 82 days">
-<meta name="twitter:description" content="A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 60 times in a row, last green on 11 May.">
+<meta name="twitter:description" content="A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 84 times in a row, last green on 11 May.">
 <meta name="twitter:image" content="https://kody-w.github.io/rappvision-rnr/rappvision/thumbs/nightly-revival.jpg">
 <meta name="twitter:player" content="https://kody-w.github.io/rappvision-rnr/e/nightly-revival.html">
 <meta name="twitter:player:width" content="1920">
@@ -32,7 +32,7 @@
 
 <meta name="theme-color" content="#0b0d10">
 <link rel="alternate" type="application/rss+xml" title="RNR — RAR Nightly Review" href="https://kody-w.github.io/rappvision-rnr/feed.xml">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "The release couldn't be cut — and the health check had been dead for 82 days", "description": "A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 60 times in a row, last green on 11 May.\n\nThe check was broken. Not the thing it checks.\n\nGated agents record _stub_sha256. The integrity audit read _sha256, which is absent on those agents, then formatted its own error message with the missing key and died on a KeyError before it could print why. A second scanner was still banning exec() — a rule the registry had deliberately retired in favour of tagging it as a declared capability.\n\nThen the check itself turned out to be incapable of failing. It ran the suite as `pytest … | tee log`, so the pipeline exited with tee's status, which is always zero. The entire suite could be red and nightly would still report green. Its registry rebuild ran on a shallow checkout, so all 278 agents came back stamped with a single commit and today's date — provenance, fabricated.\n\nTwelve defects fixed, 51 hermetic tests added to CI, and nightly went green for the first time since May.\n\nOne decision is left, and it is not a technical one.", "thumbnailUrl": ["https://kody-w.github.io/rappvision-rnr/rappvision/thumbs/nightly-revival.jpg"], "uploadDate": "2026-08-01", "duration": "PT1M5S", "contentUrl": "https://kody-w.github.io/rappvision-rnr/rappvision/media/nightly-revival.mp4", "embedUrl": "https://kody-w.github.io/rappvision-rnr/e/nightly-revival.html", "width": 1920, "height": 1080, "isFamilyFriendly": true, "publisher": {"@type": "Organization", "name": "RNR — RAR Nightly Review"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "The release couldn't be cut — and the health check had been dead for 82 days", "description": "A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 84 times in a row, last green on 11 May.\n\nThe check was broken. Not the thing it checks.\n\nGated agents record _stub_sha256. The integrity audit read _sha256, which is absent on those agents, then formatted its own error message with the missing key and died on a KeyError before it could print why. A second scanner was still banning exec() — a rule the registry had deliberately retired in favour of tagging it as a declared capability.\n\nThen the check itself turned out to be incapable of failing. It ran the suite as `pytest … | tee log`, so the pipeline exited with tee's status, which is always zero. The entire suite could be red and nightly would still report green. Its registry rebuild ran on a shallow checkout, so all 279 agents came back stamped with a single commit and today's date — provenance, fabricated.\n\nTwelve defects fixed, 14 hermetic tests added to CI, and nightly went green for the first time since May.\n\nOne decision is left, and it is not a technical one.", "thumbnailUrl": ["https://kody-w.github.io/rappvision-rnr/rappvision/thumbs/nightly-revival.jpg"], "uploadDate": "2026-08-01", "duration": "PT1M5S", "contentUrl": "https://kody-w.github.io/rappvision-rnr/rappvision/media/nightly-revival.mp4", "embedUrl": "https://kody-w.github.io/rappvision-rnr/e/nightly-revival.html", "width": 1920, "height": 1080, "isFamilyFriendly": true, "publisher": {"@type": "Organization", "name": "RNR — RAR Nightly Review"}}</script>
 <style>
   *{box-sizing:border-box}
   body{margin:0;background:#0b0d10;color:#e8eaed;
@@ -88,15 +88,15 @@
     <a class="btn" href="https://kody-w.github.io/rappvision-rnr/feed.xml">RSS</a>
   </div>
 
-  <div class="desc">A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 60 times in a row, last green on 11 May.
+  <div class="desc">A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 84 times in a row, last green on 11 May.
 
 The check was broken. Not the thing it checks.
 
 Gated agents record _stub_sha256. The integrity audit read _sha256, which is absent on those agents, then formatted its own error message with the missing key and died on a KeyError before it could print why. A second scanner was still banning exec() — a rule the registry had deliberately retired in favour of tagging it as a declared capability.
 
-Then the check itself turned out to be incapable of failing. It ran the suite as `pytest … | tee log`, so the pipeline exited with tee&#x27;s status, which is always zero. The entire suite could be red and nightly would still report green. Its registry rebuild ran on a shallow checkout, so all 278 agents came back stamped with a single commit and today&#x27;s date — provenance, fabricated.
+Then the check itself turned out to be incapable of failing. It ran the suite as `pytest … | tee log`, so the pipeline exited with tee&#x27;s status, which is always zero. The entire suite could be red and nightly would still report green. Its registry rebuild ran on a shallow checkout, so all 279 agents came back stamped with a single commit and today&#x27;s date — provenance, fabricated.
 
-Twelve defects fixed, 51 hermetic tests added to CI, and nightly went green for the first time since May.
+Twelve defects fixed, 14 hermetic tests added to CI, and nightly went green for the first time since May.
 
 One decision is left, and it is not a technical one.</div>
   <div class="tags"><span>#ci</span><span>#release-engineering</span><span>#silent-failure</span><span>#github-actions</span><span>#registry</span><span>#post-mortem</span></div>
@@ -105,7 +105,7 @@ One decision is left, and it is not a technical one.</div>
   <ol class="ch">
       <li><a href="#t=0" data-t="0"><span class="t">0:00</span>The ask: cut a new release</a></li>
       <li><a href="#t=6" data-t="6"><span class="t">0:06</span>Pre-flight — two gates fail</a></li>
-      <li><a href="#t=13" data-t="13"><span class="t">0:13</span>60 consecutive failures, last green 11 May</a></li>
+      <li><a href="#t=13" data-t="13"><span class="t">0:13</span>84 consecutive failures, last green 11 May</a></li>
       <li><a href="#t=21" data-t="21"><span class="t">0:21</span>The check was broken, not the thing it checks</a></li>
       <li><a href="#t=29" data-t="29"><span class="t">0:29</span>The path that runs the moment you say go</a></li>
       <li><a href="#t=38" data-t="38"><span class="t">0:38</span>A health check that could not fail</a></li>
