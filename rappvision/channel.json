@@ -1,0 +1,49 @@
+{
+  "schema": "rapp-vision-channel/1.0",
+  "id": "rnr",
+  "name": "RNR — RAR Nightly Review",
+  "handle": "@kody-w",
+  "tagline": "What landed on the front page of the agentic web, and what broke getting there.",
+  "avatar": "▚",
+  "links": [
+    { "label": "RAR — the registry", "url": "https://kody-w.github.io/RAR/" },
+    { "label": "Source repo", "url": "https://github.com/kody-w/rappvision-rnr" },
+    { "label": "RAPP Vision", "url": "https://kody-w.github.io/rapp-vision/" }
+  ],
+  "_note": "Sources and thumbs resolve RELATIVE TO THIS FILE'S URL, so this channel plays from any host or mirror. Adding an episode means one entry in this array plus `python3 build.py` — the landing page, per-episode share and embed pages, and the RSS feed are all generated from here. Episodes are dated snapshots: the numbers on screen were true in the registry at record time and are deliberately not retconned later.",
+  "videos": [
+    {
+      "id": "nightly-revival",
+      "title": "The release couldn't be cut — and the health check had been dead for 82 days",
+      "description": "A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 60 times in a row, last green on 11 May.\n\nThe check was broken. Not the thing it checks.\n\nGated agents record _stub_sha256. The integrity audit read _sha256, which is absent on those agents, then formatted its own error message with the missing key and died on a KeyError before it could print why. A second scanner was still banning exec() — a rule the registry had deliberately retired in favour of tagging it as a declared capability.\n\nThen the check itself turned out to be incapable of failing. It ran the suite as `pytest … | tee log`, so the pipeline exited with tee's status, which is always zero. The entire suite could be red and nightly would still report green. Its registry rebuild ran on a shallow checkout, so all 278 agents came back stamped with a single commit and today's date — provenance, fabricated.\n\nTwelve defects fixed, 51 hermetic tests added to CI, and nightly went green for the first time since May.\n\nOne decision is left, and it is not a technical one.",
+      "published": "2026-08-01",
+      "duration": 65.0,
+      "width": 1920,
+      "height": 1080,
+      "orientation": "landscape",
+      "tags": [
+        "ci",
+        "release-engineering",
+        "silent-failure",
+        "github-actions",
+        "registry",
+        "post-mortem"
+      ],
+      "thumb": "thumbs/nightly-revival.jpg",
+      "sources": [
+        { "src": "media/nightly-revival.webm", "type": "video/webm; codecs=\"vp9\"" },
+        { "src": "media/nightly-revival.mp4", "type": "video/mp4; codecs=\"avc1.640028\"" }
+      ],
+      "chapters": [
+        { "t": 0, "label": "The ask: cut a new release" },
+        { "t": 6, "label": "Pre-flight — two gates fail" },
+        { "t": 13, "label": "60 consecutive failures, last green 11 May" },
+        { "t": 21, "label": "The check was broken, not the thing it checks" },
+        { "t": 29, "label": "The path that runs the moment you say go" },
+        { "t": 38, "label": "A health check that could not fail" },
+        { "t": 47, "label": "Fixed and verified — nightly green" },
+        { "t": 56, "label": "Waiting on you — one decision" }
+      ]
+    }
+  ]
+}

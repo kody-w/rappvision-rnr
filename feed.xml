@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+  <title>RNR — RAR Nightly Review</title>
+  <link>https://kody-w.github.io/rappvision-rnr/</link>
+  <description>What landed on the front page of the agentic web, and what broke getting there.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate>
+  <item>
+    <title>The release couldn&#x27;t be cut — and the health check had been dead for 82 days</title>
+    <link>https://kody-w.github.io/rappvision-rnr/v/nightly-revival.html</link>
+    <guid isPermaLink="true">https://kody-w.github.io/rappvision-rnr/v/nightly-revival.html</guid>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+    <description>A release was requested. Pre-flighting the gates locally first turned up two failures that had nothing to do with the release, and following them led somewhere worse: the nightly health check had failed 60 times in a row, last green on 11 May.
+
+The check was broken. Not the thing it checks.
+
+Gated agents record _stub_sha256. The integrity audit read _sha256, which is absent on those agents, then formatted its own error message with the missing key and died on a KeyError before it could print why. A second scanner was still banning exec() — a rule the registry had deliberately retired in favour of tagging it as a declared capability.
+
+Then the check itself turned out to be incapable of failing. It ran the suite as `pytest … | tee log`, so the pipeline exited with tee&#x27;s status, which is always zero. The entire suite could be red and nightly would still report green. Its registry rebuild ran on a shallow checkout, so all 278 agents came back stamped with a single commit and today&#x27;s date — provenance, fabricated.
+
+Twelve defects fixed, 51 hermetic tests added to CI, and nightly went green for the first time since May.
+
+One decision is left, and it is not a technical one.</description>
+    <enclosure url="https://kody-w.github.io/rappvision-rnr/rappvision/media/nightly-revival.mp4" type="video/mp4"/>
+    <media:thumbnail url="https://kody-w.github.io/rappvision-rnr/rappvision/thumbs/nightly-revival.jpg"/>
+  </item>
+</channel>
+</rss>
